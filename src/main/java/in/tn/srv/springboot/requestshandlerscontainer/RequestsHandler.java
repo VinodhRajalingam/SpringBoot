@@ -10,4 +10,19 @@ public class RequestsHandler {
     public String welcomeUser() {
         return "Welcome User";
     }
+
+    @RequestMapping("/user")
+    public String welcomeNormalUsers() {
+        return "Welcome Normal User";
+    }
+
+    @RequestMapping("/admin")
+    public String welcomeAdmin() {
+        return "Welcome Admin";
+    }
+
+    @RequestMapping("/errors")
+    public String welcomeError() {
+        return "Welcome Error";
+    }
 }
