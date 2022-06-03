@@ -1,12 +1,10 @@
 package in.tn.srv.springboot.entitycontainer;
 
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "Customers")
-public class UserEntity {
+public class User {
     @Id
     @Column(name = "User_Id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,14 +22,18 @@ public class UserEntity {
     @Column(name = "User_Mobile", nullable = false)
     private String mobile;
 
-    public UserEntity() {
+    @Column(name = "User_Role", nullable = false)
+    private String role;
+
+    public User() {
     }
 
-    public UserEntity(String firstName, String password, String eMail,String mobile) {
+    public User(String firstName, String password, String eMail, String mobile, String role) {
         this.firstName = firstName;
         this.password = password;
         this.eMail = eMail;
         this.mobile = mobile;
+        this.role = role;
     }
 
     public int getId() {
@@ -57,7 +59,6 @@ public class UserEntity {
     public void setPassword(String password) {
         this.password = password;
     }
-
     public String geteMail() {
         return eMail;
     }
@@ -72,5 +73,12 @@ public class UserEntity {
 
     public void setMobile(String mobile) {
         this.mobile = mobile;
+    }
+
+    public String getRole() {
+        return role;
+    }
+    public void setRole(String role) {
+        this.role = role;
     }
 }

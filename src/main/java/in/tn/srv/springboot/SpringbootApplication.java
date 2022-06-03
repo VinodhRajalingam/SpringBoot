@@ -1,6 +1,6 @@
 package in.tn.srv.springboot;
 
-import in.tn.srv.springboot.entitycontainer.UserEntity;
+//import in.tn.srv.springboot.entitycontainer.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
